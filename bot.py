@@ -42,6 +42,7 @@ def start():
 
         @dp.message_handler(content_types=types.ContentType.TEXT)
         async def check_number(msg: types.Message):
+            print(debug.current_datetime, msg.from_user.username, '=', msg.text)
             try:
                 znac = 1.
                 while True:
